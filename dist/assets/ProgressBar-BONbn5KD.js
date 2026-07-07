@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-CQ54wnqU.js";var t=e();function n({value:e,color:n}){return(0,t.jsx)(`div`,{className:`progress-bar`,children:(0,t.jsx)(`span`,{style:{width:`${Math.min(100,Math.max(0,e))}%`,background:n}})})}export{n as t};

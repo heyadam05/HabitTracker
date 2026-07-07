@@ -1,0 +1,1 @@
+.progress-bar{background:var(--border);border-radius:99px;height:7px;overflow:hidden}.progress-bar span{border-radius:inherit;background:var(--primary);height:100%;transition:width .35s;display:block}

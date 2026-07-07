@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-CQ54wnqU.js";var t=e();function n({icon:e,title:n,description:r,action:i}){return(0,t.jsxs)(`div`,{className:`empty-state`,children:[(0,t.jsx)(`span`,{children:(0,t.jsx)(e,{})}),(0,t.jsx)(`h3`,{children:n}),(0,t.jsx)(`p`,{children:r}),i]})}export{n as t};
