@@ -1,0 +1,31 @@
+.empty-state {
+  min-height: 280px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 38px 20px;
+  text-align: center;
+}
+.empty-state > span {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+  border-radius: 18px;
+  background: var(--primary-soft);
+}
+.empty-state h3,
+.empty-state p {
+  margin: 0;
+}
+.empty-state p {
+  max-width: 360px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.empty-state .button {
+  margin-top: 8px;
+}

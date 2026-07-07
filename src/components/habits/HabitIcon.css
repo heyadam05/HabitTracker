@@ -1,0 +1,8 @@
+.habit-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  color: var(--habit-color);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--habit-color), transparent 88%);
+}

@@ -1,0 +1,19 @@
+.not-found-page {
+  min-height: 70vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.not-found-page > svg {
+  width: 70px;
+  height: 70px;
+  color: var(--primary);
+}
+.not-found-page h1 {
+  margin-bottom: 0;
+}
+.not-found-page p {
+  margin-bottom: 24px;
+  color: var(--muted);
+}

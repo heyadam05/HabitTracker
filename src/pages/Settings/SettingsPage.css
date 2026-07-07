@@ -1,0 +1,183 @@
+.settings-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.settings-card {
+  padding: 24px;
+}
+.settings-card > p {
+  margin: 6px 0 20px;
+}
+.settings-card--appearance {
+  grid-column: 1 / -1;
+}
+.settings-card--profile {
+  grid-column: 1 / -1;
+}
+.settings-profile {
+  display: grid;
+  grid-template-columns: 160px minmax(180px, 420px);
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+}
+.settings-profile input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+.settings-themes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.settings-themes button {
+  min-height: 105px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  text-transform: capitalize;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+}
+.settings-themes button.active {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+.settings-card h4 {
+  margin: 24px 0 10px;
+  font-size: 12px;
+}
+.settings-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.settings-colors button {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--border);
+}
+.settings-colors button.active {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.settings-row,
+.settings-action {
+  min-height: 62px;
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.settings-row > svg,
+.settings-action > svg {
+  width: 36px;
+  height: 36px;
+  padding: 9px;
+  color: var(--primary);
+  border-radius: 10px;
+  background: var(--primary-soft);
+}
+.settings-row strong,
+.settings-row small,
+.settings-action strong,
+.settings-action small {
+  display: block;
+}
+.settings-row strong,
+.settings-action strong {
+  font-size: 12px;
+}
+.settings-row small,
+.settings-action small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.settings-toggle {
+  width: 38px;
+  height: 22px;
+  padding: 2px;
+  border: 0;
+  border-radius: 99px;
+  background: var(--border);
+}
+.settings-toggle i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+.settings-toggle.active {
+  background: var(--primary);
+}
+.settings-toggle.active i {
+  transform: translateX(16px);
+}
+.settings-select {
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.settings-select input,
+.settings-select select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface-2);
+}
+.settings-action > button {
+  padding: 7px 12px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: transparent;
+}
+.settings-action > button.danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+@media (max-width: 760px) {
+  .settings-page__grid {
+    grid-template-columns: 1fr;
+  }
+  .settings-card--appearance,
+  .settings-card--profile {
+    grid-column: auto;
+  }
+}
+@media (max-width: 520px) {
+  .settings-profile {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .settings-card {
+    padding: 18px;
+  }
+  .settings-themes {
+    gap: 7px;
+  }
+  .settings-themes button {
+    min-height: 90px;
+  }
+  .settings-select {
+    grid-template-columns: 1fr 135px;
+  }
+}

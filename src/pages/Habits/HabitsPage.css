@@ -1,0 +1,148 @@
+.habits-summary {
+  min-height: 118px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 18px;
+}
+.habits-summary > div {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  padding: 6px 24px;
+  border-right: 1px solid var(--border);
+}
+.habits-summary > div:last-child {
+  border: 0;
+}
+.habits-summary svg {
+  grid-row: 1 / 3;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  color: var(--primary);
+  border-radius: 11px;
+  background: var(--primary-soft);
+}
+.habits-summary strong {
+  font-size: 22px;
+}
+.habits-summary small {
+  color: var(--muted);
+}
+.habits-list {
+  overflow: hidden;
+}
+.habits-list > nav {
+  height: 58px;
+  display: flex;
+  gap: 6px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+.habits-list > nav button {
+  padding: 0 14px;
+  color: var(--muted);
+  text-transform: capitalize;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+}
+.habits-list > nav button.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.habits-list__rows {
+  padding: 4px 24px;
+}
+.habits-list__rows article {
+  min-height: 78px;
+  display: grid;
+  grid-template-columns: 48px minmax(160px, 1fr) 140px 105px 72px;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+}
+.habits-list__rows article > div:nth-child(2) strong,
+.habits-list__rows article > div:nth-child(2) small {
+  display: block;
+}
+.habits-list__rows article small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.habits-list__progress {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+}
+.habits-list__status select {
+  width: 100%;
+  padding: 7px 8px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface-2);
+  font-size: 11px;
+}
+.habits-list__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.habits-list__actions button {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+}
+.habits-list__actions svg {
+  width: 17px;
+}
+.habits-page__confirm {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.habits-page__modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+@media (max-width: 700px) {
+  .habits-summary {
+    grid-template-columns: 1fr 1fr;
+    padding: 8px;
+  }
+  .habits-summary > div {
+    padding: 12px 8px;
+  }
+  .habits-summary > div:nth-child(2) {
+    border-right: 0;
+  }
+  .habits-list__rows {
+    padding-inline: 12px;
+  }
+  .habits-list__rows article {
+    grid-template-columns: 44px 1fr 95px 66px;
+  }
+  .habits-list__progress {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .habits-list > nav {
+    overflow-x: auto;
+    padding-inline: 6px;
+  }
+  .habits-list__rows article {
+    grid-template-columns: 42px 1fr 85px;
+  }
+  .habits-list__actions {
+    grid-column: 3;
+  }
+}

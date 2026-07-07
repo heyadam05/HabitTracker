@@ -1,0 +1,40 @@
+.circular-progress {
+  width: 132px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--primary) var(--value),
+    var(--primary-soft) 0
+  );
+}
+.circular-progress::before {
+  content: '';
+  position: absolute;
+  inset: 11px;
+  border-radius: inherit;
+  background: var(--surface);
+}
+.circular-progress > div {
+  position: relative;
+  display: grid;
+  text-align: center;
+}
+.circular-progress strong {
+  font-size: 28px;
+}
+.circular-progress span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+@media (max-width: 600px) {
+  .circular-progress {
+    width: 105px;
+  }
+  .circular-progress strong {
+    font-size: 23px;
+  }
+}
